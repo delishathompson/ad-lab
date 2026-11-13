@@ -41,14 +41,13 @@ The domain is called **corp.lab**.
 ## Network diagram
 
 ```mermaid
-flowchart LR
-  subgraph labnet["labnet: private VirtualBox network 192.168.50.0/24"]
-    DC01["DC01<br/>Windows Server 2022<br/>192.168.50.10<br/>Active Directory + DNS + DHCP"]
-    PC02["PC02<br/>Windows 10 Enterprise<br/>DHCP address .100 to .200"]
+flowchart TD
+  subgraph labnet["labnet (private network)"]
+    DC01["DC01<br/>Windows Server 2022<br/>192.168.50.10<br/>AD + DNS + DHCP"]
+    PC02["PC02<br/>Windows 10 Enterprise<br/>DHCP .100 to .200"]
   end
-  PC02 -- "asks for an address, DNS, and logins" --> DC01
+  PC02 -->|address, DNS, logins| DC01
 ```
-
 ---
 
 ## The pieces in plain terms
