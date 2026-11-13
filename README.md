@@ -19,7 +19,7 @@ The domain is called **corp.lab**.
 
 ## Network diagram
 
-```mermaid
+```
 flowchart LR
   subgraph labnet["labnet: private VirtualBox network 192.168.50.0/24"]
     DC01["DC01<br/>Windows Server 2022<br/>192.168.50.10<br/>Active Directory + DNS + DHCP"]
