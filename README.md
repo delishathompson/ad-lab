@@ -17,7 +17,16 @@ Both machines sit on one private VirtualBox network called **labnet**, so the la
 
 The domain is called **corp.lab**.
 
-## Network diagram
+## Network layout
+ 
+All traffic stays on **labnet**, a private VirtualBox network (192.168.50.0/24) with no internet.
+ 
+| Machine | Address | Where the address comes from | DNS server it uses | Network |
+|---|---|---|---|---|
+| DC01 | 192.168.50.10 | Set by hand (fixed) | 192.168.50.10 (itself) | labnet |
+| PC02 | 192.168.50.100 to .200 | DHCP on DC01 | 192.168.50.10 (DC01) | labnet |
+ 
+---
 
 # AD Lab: A Small Windows Domain Built on My Own Laptop
 
